@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Perform List Operations
+ * Class containing List Operations methods 
  * @author shirley
  *
- */
+*/
 
 public class ListOperations {
 
@@ -24,7 +24,7 @@ public class ListOperations {
 	 *  Given an list of positive or zero integers, a target integer value
 		Return true or false if the sum any of the 2 integer in the list equals the target
            
-	 * @param List<Integer>, int
+	 * @param List<Integer>, integer
 	 * @return String
 	 */
 	
@@ -35,7 +35,13 @@ public class ListOperations {
 		
 	}
 	
-	 Result getListItemsSumMatchTarget(List<Integer> listItems, int target) {
+	/**
+	 * Method to get List Items who sum equals the expected target value
+	 * @param listItems
+	 * @param target
+	 * @return Result object
+	 */
+	Result getListItemsSumMatchTarget(List<Integer> listItems, int target) {
 
 		int left =0, right =listItems.size()-1;
 		
@@ -43,8 +49,10 @@ public class ListOperations {
 			
 			if (listItems.get(left) + listItems.get(right) == target) 
 				return new Result(true,left,right);
+			
 			else if (listItems.get(left) + listItems.get(right) < target)
 				left++;
+			
 			else if (listItems.get(left) + listItems.get(right) > target)
 				right--;
 		}

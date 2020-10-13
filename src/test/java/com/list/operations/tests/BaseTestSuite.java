@@ -5,11 +5,16 @@ import org.junit.AfterClass;
 import org.junit.Before;		
 import org.junit.BeforeClass;	
 
-
+/**
+ * Base Test Suite class to perform Before Class, Before Method, After Method, After Class 
+ * and other commonly required operations
+ * @author shirley
+ *
+*/
 public class BaseTestSuite {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-	
+		
 	}
 
 	@AfterClass
@@ -19,7 +24,7 @@ public class BaseTestSuite {
 	
 	@Before
     public void runBeforeTestMethod() {
-        
+		
     }
 
     @After
